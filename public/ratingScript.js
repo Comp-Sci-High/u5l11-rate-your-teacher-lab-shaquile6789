@@ -7,7 +7,7 @@ createForm.addEventListener("submit", async (e) =>{
     const ratingData = new FormData(createForm)
     const reqBody = Object.fromEntries(ratingData)
 
-    await fetch("/",{
+    await fetch("/add/rating",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -15,5 +15,5 @@ createForm.addEventListener("submit", async (e) =>{
         body: JSON.stringify(reqBody),
     })
 
-    window.location.href = "/"
+    window.location.href = "/ratings"
 })

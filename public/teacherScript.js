@@ -8,7 +8,7 @@ createForm.addEventListener("submit", async (e) =>{
     const teacherData = new FormData(createForm)
     const reqBody = Object.fromEntries(teacherData)
 
-    await fetch("/",{
+    await fetch("/add/teacher",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
